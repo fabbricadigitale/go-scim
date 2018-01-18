@@ -2,8 +2,9 @@ package handlers
 
 import (
 	"context"
-	"github.com/davidiamyou/go-scim/shared"
 	"net/http"
+
+	"github.com/fabbricadigitale/go-scim/shared"
 )
 
 func GetServiceProviderConfigHandler(r shared.WebRequest, server ScimServer, ctx context.Context) (ri *ResponseInfo) {

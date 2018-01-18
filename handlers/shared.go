@@ -4,12 +4,13 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	. "github.com/davidiamyou/go-scim/shared"
-	"github.com/satori/go.uuid"
 	"net/http"
 	"strconv"
 	"strings"
 	"time"
+
+	. "github.com/fabbricadigitale/go-scim/shared"
+	"github.com/satori/go.uuid"
 )
 
 // interface for server, provides all necessary components for processing

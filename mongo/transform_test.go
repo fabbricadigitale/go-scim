@@ -1,12 +1,13 @@
 package mongo
 
 import (
-	. "github.com/davidiamyou/go-scim/shared"
+	"reflect"
+	"testing"
+
+	. "github.com/fabbricadigitale/go-scim/shared"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"gopkg.in/mgo.v2/bson"
-	"reflect"
-	"testing"
 )
 
 func TestConvertToMongoQuery(t *testing.T) {

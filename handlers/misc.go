@@ -3,10 +3,11 @@ package handlers
 import (
 	"context"
 	"encoding/json"
-	"github.com/davidiamyou/go-scim/shared"
 	"math"
 	"net/http"
 	"strings"
+
+	"github.com/fabbricadigitale/go-scim/shared"
 )
 
 func RootQueryHandler(r shared.WebRequest, server ScimServer, ctx context.Context) (ri *ResponseInfo) {

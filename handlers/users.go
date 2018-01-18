@@ -3,8 +3,9 @@ package handlers
 import (
 	"context"
 	"fmt"
-	"github.com/davidiamyou/go-scim/shared"
 	"net/http"
+
+	"github.com/fabbricadigitale/go-scim/shared"
 )
 
 func CreateUserHandler(r shared.WebRequest, server ScimServer, ctx context.Context) (ri *ResponseInfo) {
