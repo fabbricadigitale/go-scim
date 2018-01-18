@@ -5,10 +5,11 @@ import (
 	"crypto/sha1"
 	"encoding/base64"
 	"fmt"
-	"github.com/satori/go.uuid"
 	"math"
 	"strings"
 	"time"
+
+	"github.com/satori/go.uuid"
 )
 
 func NewIdAssignment() ReadOnlyAssignment {
@@ -31,7 +32,11 @@ type ReadOnlyAssignment interface {
 type idAssignment struct{}
 
 func (ro *idAssignment) AssignValue(r *Resource, ctx context.Context) error {
-	r.Complex["id"] = uuid.NewV4().String()
+	id, err := uuid.NewV4()
+	if err != nil {
+		return err
+	}
+	r.Complex["id"] = id.String()
 	return nil
 }
 
